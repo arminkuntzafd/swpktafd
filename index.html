@@ -564,92 +564,29 @@
 
 <section id="blog">
   <h2>Blog</h2>
-   <ul>
-    <!-- Beitrag 1 mit Teaser -->
-    <li onclick="showBlogContent(1)" style="cursor: pointer;">
-      <h3>Beitrag 1: Einschulungen</h3>
-      <p class="teaser">Die AfD fragt nach den Nationalitäten der ABC-Schützen</p>
+  <ul>
+    <li onclick="showBlogContent(this)" style="cursor: pointer;">
+      <h3>Der Direktkandidat heisst Lutz Wendel</h3>
+      <p class="teaser">Die AfD hält ihre Wahlkreisversammlung ab</p>
+      <div class="full-content" style="display:none;">
+        <p>Hier steht der volle Artikeltext zum Direktkandidaten...</p>
+      </div>
     </li>
-    <!-- Beitrag 2 mit Teaser -->
-    <li onclick="showBlogContent(2)" style="cursor: pointer;">
+    <li onclick="showBlogContent(this)" style="cursor: pointer;">
       <h3>Bericht zum Landesparteitag</h3>
       <p class="teaser">Erfolgreicher Landesparteitag – Südwestpfälzer Kandidat auf aussichtsreichem Listenplatz</p>
+      <div class="full-content" style="display:none;">
+        <p>Hier steht der volle Artikeltext zum Landesparteitag...</p>
+      </div>
     </li>
   </ul>
 </section>
+
 <section id="blog-content" style="display:none;">
   <button onclick="hideBlogContent()">Zurück</button>
-  
-  <!-- Blog Beitrag 1 -->
-  <div id="blog-post-1" style="display:none;">
-    <h3>Einschulungen</h3>
-    <p class="teaser">Hier geht es um die geplanten Einschulungen in der Stadt...</p>
-     <article>
-  <h1>Einschulungen</h1>
-  <p>Hier geht es um die geplanten Einschulungen in der Stadt...</p>
-
-  <p><strong>Pirmasens, 22. August 2024</strong> – Zum bevorstehenden Schulbeginn werden in Pirmasens insgesamt <strong>343 Erstklässler</strong> eingeschult. Die Verteilung auf die einzelnen Grundschulen gestaltet sich wie folgt:</p>
-
-  <table border="1" cellspacing="0" cellpadding="8">
-    <thead>
-      <tr>
-        <th>Grundschule</th>
-        <th>Anzahl der eingeschulten Kinder</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Robert-Schuman-Grundschule</td>
-        <td>77</td>
-      </tr>
-      <tr>
-        <td>Grundschule Horeb</td>
-        <td>71</td>
-      </tr>
-      <tr>
-        <td>Grundschule Wittelsbach</td>
-        <td>63</td>
-      </tr>
-      <tr>
-        <td>Sommerwaldschule</td>
-        <td>21</td>
-      </tr>
-      <tr>
-        <td>Ruhbank/Erlenbrunn-Grundschule</td>
-        <td>29</td>
-      </tr>
-      <tr>
-        <td>Grundschule Fehrbach</td>
-        <td>27</td>
-      </tr>
-      <tr>
-        <td>Gersbach/Windsberg/Winzeln</td>
-        <td>25</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <p>Die AfD-Stadtratsfraktion Pirmasens weist in einer aktuellen Anfrage auf den hohen Anteil von Kindern mit Migrationshintergrund hin, der insbesondere an der Horebschule bei etwa 90 Prozent liegt.</p>
-
-  <p>In diesem Zusammenhang stellt die Fraktion die Frage, wie viele der neuen Erstklässler einen Migrationshintergrund besitzen, und bittet um eine detaillierte Aufschlüsselung nach Schulen. Die Anfrage wurde vom Fraktionsvorsitzenden <strong>Volker Haberkost</strong> eingereicht und wird in der Stadtratssitzung am <strong>23. September 2024</strong> behandelt.</p>
-
-  <p>Die AfD-Fraktion bittet um eine schriftliche Beantwortung der Anfrage durch die Stadtverwaltung. Die Diskussion über die Integration der Kinder mit Migrationshintergrund in den Schulen ist auch in Pirmasens ein wichtiges Thema, das von der Kommunalpolitik aufmerksam verfolgt wird.</p>
-</article>
-
-  </div>
-  
-  <!-- Blog Beitrag 2 -->
-  <div id="blog-post-2" style="display:none;">
-    <h3>Bericht zum Landesparteitag</h3>
-    <p class="teaser">Erfolgreicher Landesparteitag – Südwestpfälzer Kandidat auf aussichtsreichem Listenplatz</p>
-    <p>
-Der Landesparteitag der Alternative für Deutschland (AfD) Rheinland-Pfalz zur Aufstellung der Landesliste für die Landtagswahl 2026 fand am vergangenen Wochenende statt und wurde vom AfD-Kreisverband Südwestpfalz als voller Erfolg bewertet.
-Die vom Landesvorstand vorgeschlagenen Kandidatinnen und Kandidaten wurden von den Delegierten mehrheitlich bestätigt. Viele engagierte Parteimitglieder, die sich über Jahre hinweg in der politischen Arbeit bewährt haben, wurden für weiterführende Aufgaben nominiert.
-Aus Sicht des Kreisverbands besonders erfreulich ist die erfolgreiche Listenplatzierung unseres ehemaligen Kreisvorsitzenden Ferdinand Weber auf Platz 19 der Landesliste. Herr Weber ist seit Jahren in der AfD aktiv und arbeitet derzeit im Deutschen Bundestag für den Abgeordneten Sebastian Münzenmaier. Durch seine politische Erfahrung und seine Kenntnis der regionalen Herausforderungen bringt er die besten Voraussetzungen für eine effektive parlamentarische Arbeit im Landtag mit.
-„Die Nominierung von Ferdinand Weber ist ein starkes Signal für unsere Region. Seine politische Kompetenz, sein Einsatz und sein klarer Kurs für die Interessen unserer Bürgerinnen und Bürger machen ihn zu einem überzeugenden Kandidaten“, so Lutz Wendel, Kreisvorsitzender der AfD Südwestpfalz.
-Der Kreisverband blickt optimistisch auf den bevorstehenden Landtagswahlkampf. Mit einem engagierten Team und einer klaren Programmatik wird die AfD auch in Rheinland-Pfalz weiter an politischem Einfluss gewinnen.</p>
-    <p>Weitere Informationen zum Thema...</p>
-  </div>
+  <h3 id="content-title"></h3>
+  <p id="content-teaser"></p>
+  <div id="content-full"></div>
 </section>
 
       
@@ -862,27 +799,27 @@ function showSection(sectionId) {
   }
 }
 
-function showBlogContent(postId) {
-  // Alle Blog-Posts verstecken
-  document.querySelectorAll('#blog-content > div').forEach(div => div.style.display = 'none');
+ function showBlogContent(listItem) {
+    // Titel und Teaser aus dem Listenelement holen
+    const title = listItem.querySelector('h3').innerText;
+    const teaser = listItem.querySelector('.teaser').innerText;
+    const fullContent = listItem.querySelector('.full-content').innerHTML;
 
-  // Blog Content Section anzeigen
-  document.getElementById('blog-content').style.display = 'block';
+    // Im Contentbereich einsetzen
+    document.getElementById('content-title').innerText = title;
+    document.getElementById('content-teaser').innerText = teaser;
+    document.getElementById('content-full').innerHTML = fullContent;
 
-  // Gewählten Beitrag anzeigen
-  document.getElementById('blog-post-' + postId).style.display = 'block';
+    // Sichtbarkeit umschalten
+    document.getElementById('blog').style.display = 'none';
+    document.getElementById('blog-content').style.display = 'block';
+  }
 
-  // Den Blog-Teaser Bereich ausblenden
-  document.getElementById('blog').style.display = 'none';
-}
-
-function hideBlogContent() {
-  // Blog-Content wieder ausblenden
-  document.getElementById('blog-content').style.display = 'none';
-
-  // Blog Teaser wieder anzeigen
-  document.getElementById('blog').style.display = 'block';
-}
+  function hideBlogContent() {
+    document.getElementById('blog-content').style.display = 'none';
+    document.getElementById('blog').style.display = 'block';
+  }
+    
 function updateDateTime() {
     const jetzt = new Date();
     const tage = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];

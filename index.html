@@ -810,7 +810,10 @@ function showSection(sectionId) {
     document.getElementById('blog').style.display = 'block';
   }
     
-function updateDateTime() {
+document.querySelectorAll('iframe')
+        .forEach(fr => fr.setAttribute('loading', 'lazy'));
+    
+    function updateDateTime() {
     const jetzt = new Date();
     const tage = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
     const tag = tage[jetzt.getDay()];
